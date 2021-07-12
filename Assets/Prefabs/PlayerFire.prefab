@@ -14,8 +14,10 @@ GameObject:
   - component: {fileID: 3206356839089103900}
   - component: {fileID: 4883485234674442001}
   - component: {fileID: 24010216448951185}
+  - component: {fileID: 333602458}
+  - component: {fileID: 4574979106055748668}
   m_Layer: 0
-  m_Name: Players
+  m_Name: PlayerFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34047,7 +34049,7 @@ MeshCollider:
   m_GameObject: {fileID: 454600886747995556}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -34066,8 +34068,37 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Constraints: 112
+  m_CollisionDetection: 1
+--- !u!135 &333602458
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454600886747995556}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Center: {x: 0, y: 0.3, z: 0}
+--- !u!114 &4574979106055748668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454600886747995556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 651803ec35f5cc042bd49cb5846911ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifePoints: 0
+  movementSpeed: 0
+  playerRB: {fileID: 0}
+  isGrounded: 0
 --- !u!1 &2319352156257632866
 GameObject:
   m_ObjectHideFlags: 0
@@ -34183,7 +34214,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 2
       minScalar: 5
       maxCurve:
         serializedVersion: 2
